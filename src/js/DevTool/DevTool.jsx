@@ -16,8 +16,8 @@ export default createDevTools(
   <DockMonitor
     toggleVisibilityKey="ctrl-h"
     changePositionKey="ctrl-q"
-    defaultIsVisible
+    defaultIsVisible={false}
   >
     <LogMonitor theme="tomorrow" />
-  </DockMonitor>
+  </DockMonitor>,
 );

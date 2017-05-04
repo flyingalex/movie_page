@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
-import Home from 'components/Home';
+import { Route } from 'react-router-dom';
+import { ConnectedRouter } from 'react-router-redux';
+import createHistory from 'history/createHashHistory';
+import Home from './components/Home';
+import Part from './components/Part';
 
 export default class AppRouteComponent extends Component {
+  componentDidMount() {}
   render() {
+    const history = createHistory();
     return (
-      <BrowserRouter>
-        <Route path="/" component={Home} />
-      </BrowserRouter>
+      <ConnectedRouter history={history}>
+        <div>
+          <Route path="/home" component={Home} />
+          <Route path="/part" component={Part} />
+        </div>
+      </ConnectedRouter>
     );
   }
 }

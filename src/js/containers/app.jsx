@@ -7,6 +7,9 @@ import DevTools from '../DevTool/DevTool';
 const store = configureStore();
 
 export default class App extends Component {
+  componentDidMount() {
+    console.log('App');
+  }
   render() {
     return (
       <Provider store={store}>
@@ -21,5 +24,5 @@ export default class App extends Component {
 
 // Not needed or used in minified mode
 App.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };

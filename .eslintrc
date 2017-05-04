@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": "airbnb",
+  "plugins": [
+      "eslint-plugin-import", "react"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": "off",
+    "no-console": 0,
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jasmine": true
+  },
+}

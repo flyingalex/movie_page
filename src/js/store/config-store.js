@@ -1,3 +1,4 @@
+/* eslint-disable */
 import DevStore from './store-dev';
 import ProdStore from './store-prod';
 

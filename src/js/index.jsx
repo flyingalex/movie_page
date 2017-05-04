@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Root from './containers/app';
 import AppRoute from './rootRoute';
-import Root from 'containers/app';
 
-import "../assets/scss/main";
+import '../assets/scss/main.scss';
 
 ReactDOM.render(
   <Root>
     <AppRoute />
   </Root>,
-  document.getElementById('app')
+  document.getElementById('app'),
 );

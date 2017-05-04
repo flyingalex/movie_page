@@ -5,7 +5,12 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const ROOT = path.resolve(__dirname, '../');
 
 module.exports = {
-  entry: './js/index.jsx',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:3000',
+    'webpack/hot/only-dev-server',
+    './js/index.jsx',
+  ],
   output: {
     filename: 'js/bundle.js',
     publicPath: "assets/",
@@ -20,6 +25,8 @@ module.exports = {
       use: [{
         loader: 'babel-loader',
         options: { presets: ['es2015', 'react'] }
+      },{
+        loader: 'eslint-loader',
       }],
     }, {
       test: /\.(sass|scss)$/, //Check for sass or scss file names
@@ -33,8 +40,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.jsx', '.scss'],
     alias: {
-      'components': path.resolve(__dirname, 'js/components'),
-      'containers': path.resolve(__dirname, 'js/containers'),
+      'components': path.resolve(__dirname, 'js/components/'),
+      'containers': path.resolve(__dirname, 'js/containers/'),
     },
   },
   plugins: [
@@ -47,5 +54,23 @@ module.exports = {
     new webpack.DefinePlugin({
       ENVIRONMENT: JSON.stringify('local'),
     }),
+    new webpack.HotModuleReplacementPlugin(),
+    // enable HMR globally
+
+    new webpack.NamedModulesPlugin(),
+    // prints more readable module names in the browser console on HMR updates
+
+    new webpack.NoEmitOnErrorsPlugin(),
+    // do not emit compiled assets that include errors
   ],
+  devServer: {
+    host: 'localhost',
+    port: 3000,
+
+    historyApiFallback: true,
+    // respond to 404s with index.html
+
+    hot: true,
+    // enable HMR on the server
+  },
 };
