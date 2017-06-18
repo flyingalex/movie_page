@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { goBack } from 'react-router-redux';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-export default class Part extends Component {
+class Part extends Component {
   componentDidMount() {
-    console.log(1111);
+    console.log();
   }
   render() {
-    console.log(this.context.store);
     return (
       <div>
         <Link to="/home">GO HOME</Link>
@@ -20,3 +20,15 @@ export default class Part extends Component {
 Part.contextTypes = {
   store: PropTypes.object,
 };
+
+Part.propTypes = {
+  router: PropTypes.object,
+};
+
+function mapStateToState(state) {
+  return {
+    router: state.router,
+  };
+}
+
+export default connect(mapStateToState, null)(Part);

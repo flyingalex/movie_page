@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
-import createHistory from 'history/createHashHistory';
 import Home from './components/Home';
 import Part from './components/Part';
+import { history } from './store/store-dev';
 
 export default class AppRouteComponent extends Component {
-  componentDidMount() {}
+  componentDidMount() {
+    console.log(1111);
+  }
   render() {
-    const history = createHistory();
     return (
       <ConnectedRouter history={history}>
-        <div>
+        <Switch>
           <Route path="/home" component={Home} />
           <Route path="/part" component={Part} />
-        </div>
+        </Switch>
       </ConnectedRouter>
     );
   }

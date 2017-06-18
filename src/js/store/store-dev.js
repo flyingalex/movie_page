@@ -9,9 +9,8 @@ const history = createHistory();
 const middleware = routerMiddleware(history);
 
 const enhancer = compose(
+  applyMiddleware(thunk, middleware),
   DevTools.instrument(),
-  applyMiddleware(thunk),
-  applyMiddleware(middleware),
 );
 
 export default (initialState) => {
@@ -22,3 +21,5 @@ export default (initialState) => {
   );
   return store;
 };
+
+export { history };
