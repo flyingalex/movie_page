@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router';
 import { ConnectedRouter } from 'react-router-redux';
 import Home from './components/Home';
 import Part from './components/Part';
-import { history } from './store/store-dev';
+import { history } from './store/config-store';
 
 export default class AppRouteComponent extends Component {
   componentDidMount() {
