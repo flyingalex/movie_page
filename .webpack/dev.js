@@ -28,20 +28,34 @@ module.exports = {
       },{
         loader: 'eslint-loader',
       }],
-    }, {
-      test: /\.(sass|scss)$/, //Check for sass or scss file names
+    },
+    {
+      test: /\.(css|scss)$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: ['css-loader', 'sass-loader']
       }),
-    }
+    },
+    {
+      test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      use: [{
+        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]',
+      }]
+    },
+    {
+      test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      use: [{
+        loader: 'file-loader'
+      }]
+    },
     ],
   },
   resolve: {
-    extensions: ['.js', '.json', '.jsx', '.scss'],
+    extensions: ['.js', '.json', '.jsx', '.scss', 'css'],
     alias: {
       'components': path.resolve(__dirname, 'js/components/'),
       'containers': path.resolve(__dirname, 'js/containers/'),
+      'views': path.resolve(__dirname, 'js/views/'),
     },
   },
   plugins: [

@@ -28,13 +28,20 @@ module.exports = {
       },{
         loader: 'eslint-loader',
       }],
-    }, {
-      test: /\.(sass|scss)$/, //Check for sass or scss file names
+    },
+    {
+      test: /\.(css|scss)$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
         use: ['css-loader', 'sass-loader']
       }),
-    }
+    },
+    {
+      test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      use: [{
+        loader: 'file-loader'
+      }]
+    },
     ],
   },
   resolve: {

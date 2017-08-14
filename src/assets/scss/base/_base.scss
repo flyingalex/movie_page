@@ -21,6 +21,7 @@ html {
   box-sizing: inherit;
 }
 
+
 /**
  * Basic styles for links
  */
@@ -31,5 +32,35 @@ a {
   @include on-event {
     color: $text-color;
     text-decoration: underline;
+  }
+}
+
+input,
+button {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  padding-right: 15px; padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1040px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    color: #0095BB;
   }
 }

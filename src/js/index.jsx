@@ -1,13 +1,13 @@
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './containers/app';
-import AppRoute from './rootRoute';
+import App from './views/App';
 
 import '../assets/scss/main.scss';
 
 ReactDOM.render(
-  <Root>
-    <AppRoute />
-  </Root>,
+  <App />,
   document.getElementById('app'),
 );

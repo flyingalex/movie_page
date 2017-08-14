@@ -5,10 +5,12 @@
       "eslint-plugin-import", "react"
   ],
   "rules": {
+    "no-script-url": "off",
     "import/no-extraneous-dependencies": "off",
     "no-console": 0,
     "react/forbid-prop-types": "off",
     "react/require-default-props": "off",
+    "max-len": "off",
   },
   "env": {
     "browser": true,
