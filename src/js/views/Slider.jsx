@@ -1,17 +1,28 @@
 import React from 'react';
 import Slider from 'react-slick';
 
+const PrevArrow = () =>
+  <button className="left-arrow slider-arrow">
+    &lt; &#60;
+  </button>;
+
+const NextArrow = () =>
+  <button className="right-arrow slider-arrow">
+    &gt; &#62;
+  </button>;
+
 export default class Silder extends React.Component {
   componentDidMount() {}
   render() {
     const settings = {
       dots: true,
-      arrows: true,
-      autoplay: true,
       infinite: true,
-      speed: 500,
+      autoplay: true,
+      autoplaySpeed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
+      prevArrow: <PrevArrow />,
+      nextArrow: <NextArrow />,
     };
     return (
       <div className="container">
