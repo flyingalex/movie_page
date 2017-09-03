@@ -7,4 +7,4 @@
 
  2.Run `npm run watch`
 
- 3.Acess [http://localhost:8080/](http://localhost:8080/)
+ 3.Acess [http://localhost:8080/](http://localhost:3000/)
