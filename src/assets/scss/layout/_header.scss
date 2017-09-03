@@ -1,3 +1,97 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.search-wrapper {
+  padding: 20px 15px;
+  padding-right: 0px;
+  .header-hot {
+    text-align: right;
+    a {
+      color: #666;
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 12px;
+    }
+  }
+  .navbar-form {
+    padding-right: 15px;
+  }
+  .form-control {
+    padding: 6px 12px;
+    font-size: 14px;
+    width: 240px;
+    height: 34px;
+    border: 1px solid #ccc;
+  }
+  .button {
+    background-color: #286090;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #286090;
+    height: 34px;
+  }
+}
+
+.navbar {
+  min-height: 40px;
+  background: #07A7E1;
+  margin-bottom: 20px;
+  .nav {
+    display: inline-block; 
+    margin: 0px;
+    padding: 0px;
+    li {
+      display: inline-block;
+      &.dropdown {
+        position: relative;
+      }
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 4px;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175); 
+        a {
+         color: #000;
+         min-width: 160px;
+         &:hover {
+          background-color: #07A7E1;
+         }
+        }
+      }
+      a {
+        display: inline-block;
+        color: #FFF;
+        padding: 10px 20px 10px 20px;
+        font-size: 14px;
+        line-height: 20px;
+        text-decoration: none;
+        &:hover {
+          background: #0095bb;
+        }
+        .caret {
+          display: inline-block;
+          width: 0;
+          height: 0;
+          margin-left: 2px;
+          vertical-align: middle;
+          border-top: 4px dashed;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+        }
+      }
+    }
+  }
+}
+

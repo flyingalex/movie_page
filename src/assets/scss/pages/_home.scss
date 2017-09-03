@@ -19,103 +19,6 @@
   }
 }
 
-.search-wrapper {
-  padding: 20px 15px;
-  padding-right: 0px;
-  .header-hot {
-    text-align: right;
-    a {
-      color: #666;
-      display: inline-block;
-      margin-right: 15px;
-      font-size: 12px;
-    }
-  }
-  .navbar-form {
-    padding-right: 15px;
-  }
-  .form-control {
-    padding: 6px 12px;
-    font-size: 14px;
-    width: 240px;
-    height: 34px;
-    border: 1px solid #ccc;
-  }
-  .button {
-    background-color: #286090;
-    color: #fff;
-    padding: 6px 12px;
-    font-size: 14px;
-    border: 1px solid #286090;
-    height: 34px;
-  }
-}
-
-.navbar {
-  min-height: 40px;
-  background: #07A7E1;
-  margin-bottom: 20px;
-  .nav {
-    display: inline-block; 
-    margin: 0px;
-    padding: 0px;
-    li {
-      display: inline-block;
-      &.dropdown {
-        position: relative;
-      }
-      .dropdown-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        z-index: 1000;
-        display: none;
-        float: left;
-        min-width: 160px;
-        padding: 5px 0;
-        margin: 2px 0 0;
-        font-size: 14px;
-        text-align: left;
-        list-style: none;
-        background-color: #fff;
-        background-clip: padding-box;
-        border: 1px solid #ccc;
-        border: 1px solid rgba(0,0,0,.15);
-        border-radius: 4px;
-        box-shadow: 0 6px 12px rgba(0,0,0,.175); 
-        a {
-         color: #000;
-         min-width: 160px;
-         &:hover {
-          background-color: #07A7E1;
-         }
-        }
-      }
-      a {
-        display: inline-block;
-        color: #FFF;
-        padding: 10px 20px 10px 20px;
-        font-size: 14px;
-        line-height: 20px;
-        text-decoration: none;
-        &:hover {
-          background: #0095bb;
-        }
-        .caret {
-          display: inline-block;
-          width: 0;
-          height: 0;
-          margin-left: 2px;
-          vertical-align: middle;
-          border-top: 4px dashed;
-          border-right: 4px solid transparent;
-          border-left: 4px solid transparent;
-        }
-      }
-    }
-  }
-}
-
 .announcement {
   font-size: 14px;
   margin: -5px 0 10px 0;
@@ -258,22 +161,6 @@
     }
   }
 }
-.col-xs-9 {
-  width: 75%;
-  display: inline-block;
-}
-.col-xs-3 {
-  width: 25%;
-  display: inline-block;
-}
-.col-xs-12 {
-  width: 100%;
-  display: inline-block;
-}
-.col-xs-2 {
-  width: 20%;
-  display: inline-block;
-}
 
 .latest-movie {
   padding-right: 5px;
@@ -304,84 +191,6 @@
 
 .movie-item-wrapper {
   margin: 0 -10px;  
-}
-
-.movie-item {
-  padding: 10px;
-  .movie-link {
-    display: block;
-    position: relative;
-    &:hover .item-hover {
-      height: 100%;
-      background-image: url('/assets/images/play-icon.png');
-      background-position:center center;
-      background-color: black;
-    }
-    .item-hover {
-      width: 100%;
-      font-size: 0;
-      background: #000 no-repeat 10px 100px;
-      opacity: 0.5;
-      position: absolute;
-      top: 0;
-      height: 0;
-    }
-    .bdtag {
-      background: #337AB7;
-    }
-    .qtag {
-      padding: 0 3px;
-      color: #FFF;
-      font-size: 12px;
-      right: 0px;
-      bottom: 0px;
-      position: absolute;
-      border: none;
-    }
-  }
-  img {
-    width: 100%;
-    vertical-align: middle;
-  }
-  .meta {
-    background: #FFF;
-    padding: 5px;
-    h1 {
-      width: 100%;
-      height: 17px;
-      line-height: 17px;
-      font-size: 14px;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      em {
-        font-size: 12px;
-        font-style: normal;
-        color: #8c8c8c;
-      }
-    }
-    .otherinfo {
-      margin-top: 5px;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 20px;
-      height: 20px;
-      overflow: hidden;
-      width: 100%;
-      color: #7E7E7E;
-      .movietype {
-        display: inline-block;
-        padding: 2px 5px 2px;
-        border-radius: 2px;
-        line-height: 1.2;
-        color: #999;
-        font-size: 12px;
-        background-color: rgb(230,230,230);
-        margin: 0 5px 5px 0;
-      }
-    }
-  }
 }
 
 .hot-movie {
@@ -496,23 +305,3 @@
   background-color: #5cb85c;
   border-color: #4cae4c;
 }
-
-.footer {
-  font-size: 12px;
-  border-top: 1px solid #DDD;
-  margin-top: 25px;
-  padding: 20px 0;
-  text-align: center;
-  color: #666;
-  background-color: #EEE;
-  p {
-    margin: 0 0 10px;
-  }
-  .friend-link {
-    a {
-      display: inline-block;
-      margin: 0 5px;
-    }
-  }
-}
-
