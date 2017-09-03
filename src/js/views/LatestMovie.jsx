@@ -10,7 +10,7 @@ const LatestMovie = () =>
           <a target="_blank" rel="noopener noreferrer" href="http://www.xunyingwang.com/movie/">更多&gt;&gt;</a>
         </span>
       </h2>
-      <div className="row latest-movie">
+      <div className="row latest-movie-item">
         {[1, 2, 3, 4, 5, 6, 7, 8].map(key =>
           <MovieItem key={key} />,
         )}

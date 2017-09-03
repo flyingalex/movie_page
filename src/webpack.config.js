@@ -13,7 +13,7 @@ module.exports = {
   ],
   output: {
     filename: 'js/bundle.js',
-    publicPath: "assets/",
+    publicPath: "/assets/",
     path: path.join(ROOT, 'public/assets')
   },
   watch: true,
@@ -37,10 +37,17 @@ module.exports = {
       }),
     },
     {
-      test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
+      test: /\.(eot|woff|woff2|ttf|svg|gif)$/,
       use: [{
         loader: 'file-loader'
       }]
+    },
+    {
+      test: /assets\/images$/,
+      loader: 'file-loader',
+      options: {
+        name: '[path][name].[ext]',
+      },
     },
     ],
   },

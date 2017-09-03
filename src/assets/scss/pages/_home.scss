@@ -61,12 +61,46 @@
     padding: 0px;
     li {
       display: inline-block;
+      &.dropdown {
+        position: relative;
+      }
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 4px;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175); 
+        a {
+         color: #000;
+         min-width: 160px;
+         &:hover {
+          background-color: #07A7E1;
+         }
+        }
+      }
       a {
         display: inline-block;
         color: #FFF;
         padding: 10px 20px 10px 20px;
         font-size: 14px;
         line-height: 20px;
+        text-decoration: none;
+        &:hover {
+          background: #0095bb;
+        }
         .caret {
           display: inline-block;
           width: 0;
@@ -244,6 +278,9 @@
 .latest-movie {
   padding-right: 5px;
   padding-left: 15px;
+  .latest-movie-item {
+    margin: 0 -10px;
+  }
 }
 
 .index-title {
@@ -265,11 +302,30 @@
   }
 }
 
+.movie-item-wrapper {
+  margin: 0 -10px;  
+}
+
 .movie-item {
   padding: 10px;
   .movie-link {
     display: block;
     position: relative;
+    &:hover .item-hover {
+      height: 100%;
+      background-image: url('/assets/images/play-icon.png');
+      background-position:center center;
+      background-color: black;
+    }
+    .item-hover {
+      width: 100%;
+      font-size: 0;
+      background: #000 no-repeat 10px 100px;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      height: 0;
+    }
     .bdtag {
       background: #337AB7;
     }

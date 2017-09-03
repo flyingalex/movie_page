@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
 }
+body {
+  font-size: 14px;
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -27,7 +30,6 @@ html {
  */
 a {
   color: $brand-color;
-  text-decoration: none;
 
   @include on-event {
     color: $text-color;

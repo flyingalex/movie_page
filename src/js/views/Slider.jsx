@@ -1,13 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-const PrevArrow = () =>
-  <button className="left-arrow slider-arrow">
+const PrevArrow = props =>
+  <button {...props} className="left-arrow slider-arrow">
     &lt; &#60;
   </button>;
 
-const NextArrow = () =>
-  <button className="right-arrow slider-arrow">
+const NextArrow = props =>
+  <button {...props} className="right-arrow slider-arrow">
     &gt; &#62;
   </button>;
 

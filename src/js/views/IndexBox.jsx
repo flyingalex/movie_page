@@ -7,9 +7,11 @@ const IndexBox = props =>
   <div className="container">
     <div>
       <ItemsTitle />
-      {props.items.map(key =>
-        <MovieItem key={key} items={5} />,
-      )}
+      <div className="movie-item-wrapper">
+        {props.items.map(key =>
+          <MovieItem key={key} items={5} />,
+        )}
+      </div>
     </div>
   </div>;
 

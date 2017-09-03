@@ -7,6 +7,7 @@ const MovieItem = props =>
       <a className="movie-link" href="http://www.xunyingwang.com/movie/619915.html">
         <img src="http://img1.xmspc.com/uploads/movie-poster/bkiucjtr7ia8.jpg" alt="生死之墙" title="生死之墙" />
         <span className="qtag bdtag">超清</span>
+        <div className="item-hover" />
       </a>
       <div className="meta">
         <h1>
